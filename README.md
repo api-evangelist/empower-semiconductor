@@ -42,5 +42,13 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Empower Semiconductor is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Empower Semiconductor is a fabless power-semiconductor company founded in 2014 and headquartered in San Jose, California, with an R&D office in Munich. It designs integrated voltage regulators (IVRs), silicon capacitors (ECAP) and vertical power-delivery platforms for AI, high-performance computing and embedded systems, built on its FinFast architecture combining FinFET-based design, advanced packaging, advanced magnetics and integrated silicon capacitors. Its Crescendo platform targets kilowatt-class vertical power delivery for AI and HPC processors and its Forte family delivers multi-domain integrated regulation up to 25W. Analog Devices completed its acquisition of Empower Semiconductor on 7 July 2026. Empower ships silicon, not software: it publishes no developer portal, no public API, and no machine-readable specification of any kind.
+
+- [Website](https://www.empowersemi.com/)
+- [About](https://www.empowersemi.com/about-us/)
+- [Products](https://www.empowersemi.com/our-products/)
+- [Blog](https://www.empowersemi.com/category/press-release/)
+- [BlogRSS](https://www.empowersemi.com/feed/)
+- [Support](https://www.empowersemi.com/contact/)
+- [TermsOfService](https://www.empowersemi.com/terms-of-use/)
+- [PrivacyPolicy](https://www.empowersemi.com/privacy-policy/)

@@ -1,17 +1,34 @@
 aid: empower-semiconductor
 name: Empower Semiconductor
-description: 'Empower Semiconductor is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Empower Semiconductor is a fabless power-semiconductor company founded in 2014 and headquartered
+  in San Jose, California, with an R&D office in Munich. It designs integrated voltage regulators (IVRs),
+  silicon capacitors (ECAP) and vertical power-delivery platforms for AI, high-performance computing and
+  embedded systems, built on its FinFast architecture combining FinFET-based design, advanced packaging,
+  advanced magnetics and integrated silicon capacitors. Its Crescendo platform targets kilowatt-class
+  vertical power delivery for AI and HPC processors and its Forte family delivers multi-domain integrated
+  regulation up to 25W. Analog Devices completed its acquisition of Empower Semiconductor on 7 July 2026.
+  Empower ships silicon, not software: it publishes no developer portal, no public API, and no
+  machine-readable specification of any kind.'
+image: https://www.empowersemi.com/wp-content/uploads/2025/09/EMPR-Crescendo-Hero-Image-v1-980x693-1.webp
 url: https://raw.githubusercontent.com/api-evangelist/empower-semiconductor/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
+x-tier: profile
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Semiconductors
+- Hardware
+- Power Management
+- Integrated Voltage Regulators
+- Silicon Capacitors
+- Artificial Intelligence
+- High Performance Computing
+- Data Centers
+- Electronics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,54 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/empower-semiconductor-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.empowersemi.com/
+- type: About
+  url: https://www.empowersemi.com/about-us/
+- type: Products
+  url: https://www.empowersemi.com/our-products/
+- type: Blog
+  url: https://www.empowersemi.com/category/press-release/
+- type: BlogRSS
+  url: https://www.empowersemi.com/feed/
+- type: Support
+  url: https://www.empowersemi.com/contact/
+- type: TermsOfService
+  url: https://www.empowersemi.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.empowersemi.com/privacy-policy/
+- type: LLMsTxt
+  url: llms/empower-semiconductor-llms.txt
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Empower Semiconductor sells silicon — integrated voltage regulators, silicon capacitors and
+    vertical power-delivery hardware, now as an Analog Devices company — and its entire public
+    presence is a 16-page WordPress marketing site with no developer, docs, or reference section;
+    the only design collateral it publishes sits behind a WordPress password prompt at
+    /design-resources/, and even the CMS REST API at /wp-json/ is deliberately closed to
+    unauthenticated callers.
+  evidence:
+  - url: https://www.empowersemi.com/developers
+    status: 404
+  - url: https://www.empowersemi.com/openapi.json
+    status: 404
+  - url: https://www.empowersemi.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.empowersemi.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.empowersemi.com/design-resources/
+    status: 200
+  - url: https://www.empowersemi.com/wp-json/
+    status: 401
+  - url: https://www.empowersemi.com/llms.txt
+    status: 200
+  checked: '2026-08-12'

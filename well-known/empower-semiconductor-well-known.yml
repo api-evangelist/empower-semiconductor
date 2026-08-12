@@ -1,0 +1,82 @@
+generated: '2026-08-12'
+method: probed
+source: https://www.empowersemi.com/
+host: https://www.empowersemi.com
+note: >-
+  Every /.well-known/ path probed on the only host Empower Semiconductor operates returned 404 with a
+  WordPress HTML 404 body — no security.txt, no OIDC/OAuth discovery, no api-catalog, no ai-plugin, and
+  no A2A agent card at either the canonical /.well-known/agent-card.json or the legacy
+  /.well-known/agent.json. This file records a verified ABSENCE, not a presence: no WellKnown,
+  SecurityTxt or AgentCard pointer is wired in apis.yml. The apex empowersemi.com 301s to www, so the
+  www host is the single probe target.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+  content_type: text/html
+- path: /.well-known/openid-configuration
+  status: 404
+  content_type: text/html
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  content_type: text/html
+- path: /.well-known/api-catalog
+  status: 404
+  content_type: text/html
+- path: /.well-known/ai-plugin.json
+  status: 404
+  content_type: text/html
+- path: /.well-known/agent-card.json
+  status: 404
+  content_type: text/html
+- path: /.well-known/agent.json
+  status: 404
+  content_type: text/html
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run against the only host in scope. apis.yml carries no apis[] entries,
+    so there is no baseURL host and no OpenAPI servers[] host to probe beyond the website itself.
+  probes:
+  - url: https://www.empowersemi.com/openapi.json
+    status: 404
+    result: WordPress HTML 404 page, not a spec
+  - url: https://www.empowersemi.com/openapi.yaml
+    status: 403
+    result: nginx 403 Forbidden, not a spec
+  - url: https://www.empowersemi.com/swagger.json
+    status: 404
+  - url: https://www.empowersemi.com/api-docs
+    status: 404
+  - url: https://www.empowersemi.com/docs
+    status: 404
+  - url: https://www.empowersemi.com/api
+    status: 404
+  - url: https://www.empowersemi.com/developers
+    status: 404
+  - url: https://www.empowersemi.com/developer
+    status: 404
+  - url: https://www.empowersemi.com/graphql
+    status: 404
+    result: no GraphQL surface; introspection not attempted against a 404
+  - url: https://www.empowersemi.com/wp-json/
+    status: 401
+    result: >-
+      WordPress core REST API is present but deliberately locked down —
+      {"code":"rest_cannot_access","message":"DRA: Only authenticated users can access the REST API."}.
+      This is CMS platform infrastructure, not a published developer API, and is recorded here as
+      evidence rather than catalogued as an Empower Semiconductor API.
+  - url: https://www.empowersemi.com/design-resources/
+    status: 200
+    result: >-
+      WordPress password-protected page ("This content is password-protected") gating hardware design
+      collateral — datasheets and evaluation material, not an API reference.
+  - url: https://www.empowersemi.com/sitemap.xml
+    status: 200
+    result: >-
+      Full Yoast sitemap index walked; 16 pages total, none of them a developer, API, docs or
+      reference page.
+  - url: https://github.com/empowersemi
+    status: 404
+    result: no GitHub organization under this name
+  - url: https://github.com/empower-semiconductor
+    status: 404
+    result: no GitHub organization under this name
