@@ -9,6 +9,17 @@ description: 'Empower Semiconductor is a fabless power-semiconductor company fou
   regulation up to 25W. Analog Devices completed its acquisition of Empower Semiconductor on 7 July 2026.
   Empower ships silicon, not software: it publishes no developer portal, no public API, and no
   machine-readable specification of any kind.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.empowersemi.com/wp-content/uploads/2025/09/EMPR-Crescendo-Hero-Image-v1-980x693-1.webp
 url: https://raw.githubusercontent.com/api-evangelist/empower-semiconductor/refs/heads/main/apis.yml
 x-type: company
