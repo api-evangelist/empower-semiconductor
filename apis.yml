@@ -50,7 +50,7 @@ tags:
 - Silicon Capacitors
 - Artificial Intelligence
 - High Performance Computing
-- Data-Center
+- Data Center
 - Electronics
 tags_raw:
 - Company
@@ -63,6 +63,7 @@ tags_raw:
 - High Performance Computing
 - Data Centers
 - Electronics
+- Data-Center
 apis: []
 maintainers:
 - FN: Kin Lane
